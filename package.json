@@ -1,0 +1,48 @@
+{
+  "name": "exortech.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exortech/exortech.com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/exortech/exortech.com/issues"
+  },
+  "homepage": "https://github.com/exortech/exortech.com#readme",
+  "dependencies": {
+    "font-awesome": "4.7.0",
+    "jquery": "3.2.1"
+  },
+  "devDependencies": {
+    "html-validator": "2.2.3",
+    "imagemin": "5.3.1",
+    "imagemin-mozjpeg": "6.0.0",
+    "imagemin-pngquant": "5.0.1",
+    "metalsmith": "2.3.0",
+    "metalsmith-fingerprint-ignore": "2.0.0",
+    "metalsmith-imagemin": "4.0.0",
+    "metalsmith-in-place": "1.4.4",
+    "metalsmith-layouts": "1.8.1",
+    "metalsmith-permalinks": "0.5.0",
+    "metalsmith-robots": "1.0.1",
+    "metalsmith-sass": "1.4.0",
+    "metalsmith-serve": "0.0.7",
+    "metalsmith-sitemap": "1.2.0",
+    "metalsmith-watch": "1.0.3",
+    "nunjucks": "3.0.1",
+    "stylelint": "8.1.1",
+    "stylelint-config-standard": "17.0.0"
+  },
+  "scripts": {
+    "build": "node ./build.js",
+    "minify": "node ./imagemin.js",
+    "start": "npm run build",
+    "stylelint": "stylelint 'scss/*.scss' --syntax scss || true",
+    "test": "npm run build",
+    "validate": "node ./html-validate.js"
+  }
+}
