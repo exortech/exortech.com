@@ -6,4 +6,5 @@ env:
 before_deploy: pip install awscli
 deploy:
   - provider: script
+    skip_cleanup: true
     script: npm run upload
