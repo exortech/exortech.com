@@ -31,7 +31,6 @@ let options = envOptions[env]
 console.log('Using options:', options)
 
 nunjucks.configure(null, {
-  watch: true,
   noCache: true
 })
 
