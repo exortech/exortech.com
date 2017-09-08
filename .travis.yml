@@ -7,4 +7,4 @@ before_deploy: pip install awscli
 deploy:
   - provider: script
     skip_cleanup: true
-    script: npm run upload
+    script: AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY AWS_SECRET_ACCESS_KEY=$AWS_SECRET_KEY npm run upload
