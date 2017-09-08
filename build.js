@@ -9,6 +9,7 @@ const sitemap = require('metalsmith-sitemap')
 const robots = require('metalsmith-robots')
 const watch = require('metalsmith-watch')
 const permalinks = require('metalsmith-permalinks')
+const nunjucks = require('nunjucks')
 
 let env = process.env.NODE_ENV || 'DEV'
 console.log('Building for environment:', env)
@@ -28,6 +29,11 @@ const envOptions = {
 
 let options = envOptions[env]
 console.log('Using options:', options)
+
+nunjucks.configure(null, {
+  watch: true,
+  noCache: true
+})
 
 let ms = Metalsmith(__dirname)
   .metadata({
@@ -50,6 +56,9 @@ let ms = Metalsmith(__dirname)
   }))
   .use(layouts({
     engine: 'nunjucks',
+    requires: {
+      'nunjucks': nunjucks
+    },
     default: 'default.html',
     partials: 'layouts/partials',
     pattern: '**/*.html'
