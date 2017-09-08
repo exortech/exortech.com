@@ -43,7 +43,7 @@
     "start": "npm run build",
     "stylelint": "stylelint 'scss/*.scss' --syntax scss || true",
     "test": "npm run build",
-    "upload": "aws s3 sync public/ s3://www.exortech.com/ --cache-control 'public, max-age=31536000000' --region us-west-2 --exclude *.html && aws s3 sync public/ s3://www.exortech.com/ --cache-control 'public, max-age=300' --region us-west-2 --include *.html",
+    "upload": "aws s3 sync ./public/ s3://www.exortech.com/ --cache-control 'public, max-age=31536000000' --region us-west-2 --exclude *.html && aws s3 sync ./public/ s3://www.exortech.com/ --cache-control 'public, max-age=300' --region us-west-2 --include *.html",
     "validate": "node ./html-validate.js"
   }
 }
