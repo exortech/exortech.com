@@ -22,7 +22,7 @@ const envOptions = {
   },
   PRD: {
     'ga_tracking_id': 'UA-7294900-1',
-    'site_url': 'https://exortech.com',
+    'site_url': 'https://www.exortech.com',
     'watch': false
   }
 }
