@@ -1,6 +1,4 @@
-# exortech.com [![Build Status](https://travis-ci.org/exortech/exortech.com.svg?branch=master)](https://travis-ci.org/exortech/exortech.com)
-[![dependencies Status](https://david-dm.org/exortech/exortech.com/status.svg)](https://david-dm.org/exortech/exortech.com)
-[![devDependencies Status](https://david-dm.org/dev/exortech/exortech.com/status.svg)](https://david-dm.org/exortech/exortech.com)
+# exortech.com [![Build Status](https://travis-ci.org/exortech/exortech.com.svg?branch=master)](https://travis-ci.org/exortech/exortech.com) [![dependencies Status](https://david-dm.org/exortech/exortech.com/status.svg)](https://david-dm.org/exortech/exortech.com)
 
 This is the website for [exortech.com](https://www.exortech.com).
 
