@@ -9,6 +9,7 @@ const sitemap = require('metalsmith-sitemap')
 const robots = require('metalsmith-robots')
 const watch = require('metalsmith-watch')
 const permalinks = require('metalsmith-permalinks')
+const redirect = require('metalsmith-redirect')
 const nunjucks = require('nunjucks')
 
 let env = process.env.NODE_ENV || 'DEV'
@@ -78,6 +79,14 @@ let ms = Metalsmith(__dirname)
   }))
   .use(permalinks({
     relative: false
+  }))
+  .use(redirect({
+    '/presentations/monolith_to_microservices/': 'https://exortech.github.io/presentations/monolith_to_microservices/',
+    '/presentations/test_driven_decoupling/': 'https://exortech.github.io/presentations/test_driven_decoupling/',
+    '/presentations/dev_ops_culture/': 'https://exortech.github.io/presentations/dev_ops_culture/',
+    '/presentations/enterprise_mvps/': 'https://exortech.github.io/presentations/enterprise_mvps/',
+    '/presentations/pivoting_midflight/': 'https://exortech.github.io/presentations/pivoting_midflight/',
+    '/presentations/promise_of_node/': 'https://exortech.github.io/presentations/promise_of_node/'
   }))
   .use(sitemap({
     hostname: options['site_url'],
