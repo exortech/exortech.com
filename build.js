@@ -9,6 +9,7 @@ const sitemap = require('metalsmith-sitemap')
 const robots = require('metalsmith-robots')
 const watch = require('metalsmith-watch')
 const permalinks = require('metalsmith-permalinks')
+const concat = require('metalsmith-concat')
 const redirect = require('metalsmith-redirect')
 const nunjucks = require('nunjucks')
 
@@ -51,8 +52,24 @@ let ms = Metalsmith(__dirname)
     includePaths: ['./scss'],
     outputDir: 'css'
   }))
+  .use(concat({
+    searchPaths: [
+      'source',
+      'node_modules'
+    ],
+    files: [
+      'jquery.easing/jquery.easing.min.js',
+      'js/jquery.fittext.js',
+      'js/creative.js',
+      'js/email-obfuscator.js'
+    ],
+    output: 'js/main.js'
+  }))
   .use(fingerprint({
-    pattern: 'css/main.css'
+    pattern: [
+      'css/main.css',
+      'js/main.js'
+    ]
   }))
   .use(layouts({
     engine: 'nunjucks',
