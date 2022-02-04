@@ -23,6 +23,7 @@
     "imagemin": "8.0.1",
     "imagemin-mozjpeg": "10.0.0",
     "imagemin-pngquant": "9.0.2",
+    "imagemin-svgo": "10.0.1",
     "jstransformer-nunjucks": "1.0.0",
     "metalsmith": "2.4.1",
     "metalsmith-concat": "7.0.3",
@@ -47,7 +48,8 @@
     "start": "npm run build",
     "stylelint": "stylelint 'scss/*.scss' --syntax scss || true",
     "test": "npm run build",
-    "deploy": "NODE_ENV=PRD npm run build && npm run upload",
+    "imagemin": "node ./imagemin.mjs",
+    "deploy": "NODE_ENV=PRD npm run build && npm run imagemin && npm run upload",
     "upload": "AWS_PROFILE=exortech aws s3 sync ./public/ s3://www.exortech.com/ --region us-west-2",
     "validate": "node ./html-validate.js"
   }
