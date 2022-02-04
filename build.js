@@ -1,5 +1,4 @@
 const Metalsmith = require('metalsmith')
-const imagemin = require('metalsmith-imagemin')
 const inplace = require('metalsmith-in-place')
 const fingerprint = require('metalsmith-fingerprint-ignore')
 const layouts = require('metalsmith-layouts')
@@ -50,7 +49,10 @@ let ms = Metalsmith(__dirname)
   .clean(false)
   .use(sass({
     includePaths: ['./scss'],
-    outputDir: 'css'
+    outputDir: 'css',
+    outputStyle: 'compressed',
+    sourceMap: true,
+    sourceMapContents: true
   }))
   .use(concat({
     searchPaths: [
@@ -72,27 +74,11 @@ let ms = Metalsmith(__dirname)
     ]
   }))
   .use(layouts({
-    engine: 'nunjucks',
-    requires: {
-      'nunjucks': nunjucks
-    },
-    default: 'default.html',
-    partials: 'layouts/partials',
-    pattern: '**/*.html'
+    pattern: '**/*.njk',
+    default: 'default.njk'
   }))
   .use(inplace({
-    engine: 'nunjucks',
-    engineOptions: {
-      'cache': false
-    },
-    pattern: '**/*.html'
-  }))
-  .use(imagemin({
-    mozjpeg: {
-      quality: 60
-    },
-    pngquant: { },
-    svgo: { }
+    pattern: '**/*.njk'
   }))
   .use(permalinks({
     relative: false
