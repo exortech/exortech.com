@@ -59,3 +59,5 @@ typings/
 
 yarn.lock
 public
+
+.DS_Store
