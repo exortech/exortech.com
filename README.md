@@ -1,10 +1,10 @@
-# exortech.com [![Build Status](https://travis-ci.org/exortech/exortech.com.svg?branch=master)](https://travis-ci.org/exortech/exortech.com) [![dependencies Status](https://david-dm.org/exortech/exortech.com/status.svg)](https://david-dm.org/exortech/exortech.com)  [![dependencies Status](https://img.shields.io/david/dev/exortech/exortech.com.svg)](https://david-dm.org/exortech/exortech.com) [![Website](https://img.shields.io/website-up-down-green-red/http/exortech.com.svg?label=exortech.com)]()
+# exortech.com
 
 This is the website for [exortech.com](https://www.exortech.com).
 
 ## Setting up the web site
 
-1. Install node.js 6+ `brew install node`
+1. Install node.js `brew install node`
 1. Install dependencies `npm install`
 1. Build and launch the website `npm run build`
 1. Browse to `http://localhost:8081` to view the site
@@ -18,5 +18,3 @@ Files processed by Metalsmith are output to the `public` folder. The contents of
 ## Deploying
 
 The site content is hosted on AWS S3 and served through Cloudfront.
-
-Committing changes to git will cause [TravisCI](https://travis-ci.org/exortech/exortech.com) to trigger a new build which will push the changes to S3, automatically redeploying the website.
