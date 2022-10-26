@@ -1,13 +1,13 @@
 const Metalsmith = require('metalsmith')
-const inplace = require('metalsmith-in-place')
+const inplace = require('@metalsmith/in-place')
 const fingerprint = require('metalsmith-fingerprint-ignore')
-const layouts = require('metalsmith-layouts')
-const sass = require('metalsmith-sass')
+const layouts = require('@metalsmith/layouts')
+const sass = require('@metalsmith/sass')
 const serve = require('metalsmith-serve')
 const sitemap = require('metalsmith-sitemap')
 const robots = require('metalsmith-robots')
 const watch = require('metalsmith-watch')
-const permalinks = require('metalsmith-permalinks')
+const permalinks = require('@metalsmith/permalinks')
 const concat = require('metalsmith-concat')
 const redirect = require('metalsmith-redirect')
 const nunjucks = require('nunjucks')
@@ -51,6 +51,14 @@ let ms = Metalsmith(__dirname)
     includePaths: ['./scss'],
     outputDir: 'css',
     outputStyle: 'compressed',
+    sourceMap: true,
+    sourceMapContents: true
+  }))
+  .use(sass({
+    entries: {
+      './scss/theme.scss': 'css/main.css'
+    },
+    style: 'compressed',
     sourceMap: true,
     sourceMapContents: true
   }))
