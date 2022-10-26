@@ -48,7 +48,7 @@
     "stylelint": "stylelint 'scss/*.scss' || true",
     "stylelint:fix": "stylelint 'scss/*.scss' --fix",
     "test": "npm run build",
-    "deploy": "NODE_ENV=PRD npm run build && npm run imagemin && npm run upload",
+    "deploy": "NODE_ENV=PRD npm run build && npm run minify && npm run upload",
     "upload": "AWS_PROFILE=exortech aws s3 sync ./public/ s3://www.exortech.com/ --region us-west-2",
     "validate": "node ./html-validate.js"
   }
