@@ -15,17 +15,18 @@
   "homepage": "https://github.com/exortech/exortech.com#readme",
   "dependencies": {
     "font-awesome": "4.7.0",
-    "jquery": "3.6.0",
+    "jquery": "3.6.1",
     "jquery.easing": "1.4.1"
   },
   "devDependencies": {
-    "html-validator": "6.0.0",
+    "html-validator": "6.0.1",
     "imagemin": "8.0.1",
     "imagemin-mozjpeg": "10.0.0",
     "imagemin-pngquant": "9.0.2",
     "imagemin-svgo": "10.0.1",
-    "jstransformer-nunjucks": "1.0.0",
-    "metalsmith": "2.4.1",
+    "jstransformer-nunjucks": "1.1.0",
+    "klaw": "4.0.1",
+    "metalsmith": "2.5.1",
     "metalsmith-concat": "7.0.3",
     "metalsmith-fingerprint-ignore": "2.0.0",
     "metalsmith-in-place": "4.4.2",
@@ -37,10 +38,10 @@
     "metalsmith-serve": "0.0.7",
     "metalsmith-sitemap": "1.2.2",
     "metalsmith-watch": "1.0.3",
-    "node-sass": "7.0.1",
+    "node-sass": "7.0.3",
     "nunjucks": "3.2.3",
-    "stylelint": "14.3.0",
-    "stylelint-config-standard": "24.0.0"
+    "stylelint": "14.14.0",
+    "stylelint-config-standard": "29.0.0"
   },
   "scripts": {
     "build": "node ./build.js",
