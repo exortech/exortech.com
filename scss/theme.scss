@@ -2,57 +2,65 @@
 @import 'creative';
 
 .header-default {
-  background-image: url("../img/header-blue.jpg");
+	background-image: url('../img/header-blue.jpg');
 }
+
 .header-presentations {
-  background-image: url("../img/header-speaker.jpg");
+	background-image: url('../img/header-speaker.jpg');
 }
+
 header .header-content .header-content-inner p {
-  font-size: 26px;
-  color: rgba(255,255,255,0.85);
+	font-size: 26px;
+	color: rgba(255, 255, 255, 0.85);
 }
+
 .navbar-default.affix .navbar-header .navbar-brand,
 .navbar-default .navbar-header .navbar-brand,
 .navbar-default.affix .navbar-header .navbar-brand:hover,
 .navbar-default.affix .navbar-header .navbar-brand:focus,
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
-  background-image: url("../img/exortech-logo-full-bold.png");
-  background-position: center center;
-  background-size: 90%;
-  background-repeat: no-repeat;
-  color: transparent;
-  font-size: initial;
+	background-image: url('../img/exortech-logo-full-bold.png');
+	background-position: center center;
+	background-size: 90%;
+	background-repeat: no-repeat;
+	color: transparent;
+	font-size: initial;
 }
+
 .fa-stack .text-primary:hover {
-  color: #000;
+	color: #000;
 }
+
 @media (min-width: 768px) {
-  .navbar-default {
-    background-color: rgba(0,0,0,0.2);
-  }
-  .navbar-default .navbar-header {
-    .navbar-brand {
-      background-image: url("../img/exortech-logo-full-transparent.png");
-    }
-    .navbar-brand:hover, .navbar-brand:active {
-      background-image: url("../img/exortech-logo-full-white.png");
-    }
-  }
+	.navbar-default {
+		background-color: rgba(0, 0, 0, 0.2);
+	}
+
+	.navbar-default .navbar-header {
+		.navbar-brand {
+			background-image: url('../img/exortech-logo-full-transparent.png');
+		}
+
+		.navbar-brand:hover, .navbar-brand:active {
+			background-image: url('../img/exortech-logo-full-white.png');
+		}
+	}
 }
+
 .social-buttons {
-  font-size: 6px;
+	font-size: 6px;
 }
 
 .text-muted {
-  color: #757575;
+	color: #757575;
 }
 
 .presentation-slide {
-  width: 100%;
-  border: 1px solid #757575;
+	width: 100%;
+	border: 1px solid #757575;
 }
 
 #services .row {
-  margin-bottom: 4rem;
+	margin-bottom: 4rem;
 }
