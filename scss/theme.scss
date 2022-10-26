@@ -2,11 +2,11 @@
 @import 'creative';
 
 .header-default {
-	background-image: url('../img/header-blue.jpg');
+	background-image: url('../img/header-blue.webp');
 }
 
 .header-presentations {
-	background-image: url('../img/header-speaker.jpg');
+	background-image: url('../img/header-speaker.webp');
 }
 
 header .header-content .header-content-inner p {
@@ -20,7 +20,7 @@ header .header-content .header-content-inner p {
 .navbar-default.affix .navbar-header .navbar-brand:focus,
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
-	background-image: url('../img/exortech-logo-full-bold.png');
+	background-image: url('../img/exortech-logo-full-bold.webp');
 	background-position: center center;
 	background-size: 90%;
 	background-repeat: no-repeat;
@@ -39,11 +39,11 @@ header .header-content .header-content-inner p {
 
 	.navbar-default .navbar-header {
 		.navbar-brand {
-			background-image: url('../img/exortech-logo-full-transparent.png');
+			background-image: url('../img/exortech-logo-full-transparent.webp');
 		}
 
 		.navbar-brand:hover, .navbar-brand:active {
-			background-image: url('../img/exortech-logo-full-white.png');
+			background-image: url('../img/exortech-logo-full-white.webp');
 		}
 	}
 }
